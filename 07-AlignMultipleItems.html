@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>FlexBox</title>
+
+	<style type="text/css">
+		/*FLEXBOX*/
+
+		body {
+			font-family: 'Gotham', 'arial', 'sans-serif';
+			font-size: 100%;
+			color: #333;
+		}
+		.pageTitle{
+			font-size: 4em;
+			margin: 0 10%;
+			padding: 16px 0;
+		}
+		.pageSubTitle{
+			margin: 0 10%;
+			padding: 0 0 16px 0;
+		}
+		.description{
+			margin: 0 10%;
+			padding: 0 0 16px 0;
+		}
+
+		.boxContainer1{
+			width:80%;
+			margin: 0 10%;
+			border: 1px solid #333;
+			min-height: 400px;
+
+			display: flex;
+
+			/*Main Axies*/
+			flex-flow: row wrap;
+			justify-content: space-around;
+
+			/*wrap lines (main)*/
+			align-content: stretch; /*aligns the lines of content*/
+		}
+
+		.item{
+			padding:16px;
+			font-size: 2em;
+			font-weight: bold;
+			box-sizing: border-box;
+			border: 1px solid #333;
+			background-color: #eee;
+		}
+
+
+		/*REFERENCE*/
+		.flex-container {
+			display: flex;/* Enable FlexBox*/
+
+			/*MAIN AXIS*/
+			flex-direction: row; /* row (D)|row-reverse|column|column-reverse|initial|inherit */
+			flex-wrap: nowrap; /*nowrap (D)|wrap|wrap-reverse|initial|inherit */
+			/*Shorthand*/flex-flow: row nowrap; /* [flex-direction] [flex-wrap]|initial|inherit;*/
+
+			/*main axis alignment of items*/justify-content:flex-start; /*flex-start(D)|flex-end|center|space-between|space-around|initial|inherit;*/
+
+			/*cross axis agliment of items*/align-items: stretch; /*stretch(D)|center|flex-start|flex-end|baseline|initial|inherit*/
+
+			/*flex-wrap lines */align-content: flex-start; /*stretch(D)|center|flex-start|flex-end|space-between|space-around|initial|inherit;*/
+
+		}
+
+		.flex-item {
+			flex-grow: 1; /* 0(D)|number|initial|inherit; 			http://www.w3schools.com/cssref/css3_pr_flex-grow.asp*/
+			flex-shrink: 1; /* 0(D)|number|initial|inherit;			http://www.w3schools.com/cssref/css3_pr_flex-shrink.asp*/
+			flex-basis: 100px; /* number|auto(D)|initial|inherit; 	http://www.w3schools.com/cssref/css3_pr_flex-basis.asp*/
+			/*Shorthand*/ flex: 0 0 auto; /*flex-grow flex-shrink flex-basis|auto|initial|inherit*/
+
+			/*Individual align*/align-self: flex-end; /*stretch(D)|center|flex-start|flex-end|baseline|initial|inherit;*/
+		}
+
+		.important-items{
+			margin-left: auto; /*notice margin auto take all available space remaining*/
+			/*Also not that margins will be ignored in some modes such as space-around and space-between*/
+			/*Margins do not collaspe esp* in vertical spacing - NOTE using space-around|between will ignore margins altogether*/
+		}
+
+	</style>
+
+</head>
+<body>
+	<h1 class="pageTitle">Using Flexbox</h1>
+	<h2 class="pageSubTitle">align-self</h2>
+	<p class="description">Allows you to cross align one item</p>
+	<section class="boxContainer1">
+		<div class="item ">One</div>
+		<div class="item ">Two</div>
+		<div class="item ">Three</div>
+		<div class="item ">Four</div>
+		<div class="item ">Five</div>
+		<div class="item ">Six</div>
+		<div class="item ">Seven</div>
+		<div class="item ">Eight</div>
+		<div class="item ">Nine</div>
+	</section>
+
+
+</body>
+
+</html>
