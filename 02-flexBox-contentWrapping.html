@@ -1,81 +1,79 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>FlexBox</title>
+  <head>
+    <meta charset="utf-8" />
+    <title>FlexBox</title>
 
-	<style type="text/css">
-		/*FLEXBOX*/
-		/*
+    <style type="text/css">
+      /*FLEXBOX*/
+      /*
 			Controlled by 'flex-flow'
 			-	Main axis - row/column
 			-	Cross axis - row/column
 
-			*/		
-			body {
-				font-family: 'Gotham', 'arial', 'sans-serif';
-				font-size: 100%;
-				color: #333;
-			}
-			.pageTitle{
-				font-size: 4em;
-				margin: 0 10%;
-				padding: 16px 0;
-			}
-			.pageSubTitle{
-				margin: 0 10%;
-				padding: 0 0 16px 0;
-			}
-			.description{
-				margin: 0 10%;
-				padding: 0 0 16px 0;
-			}
+			*/
+      body {
+        font-family: "Gotham", "arial", "sans-serif";
+        font-size: 100%;
+        color: #333;
+      }
+      .pageTitle {
+        font-size: 4em;
+        margin: 0 10%;
+        padding: 16px 0;
+      }
+      .pageSubTitle {
+        margin: 0 10%;
+        padding: 0 0 16px 0;
+      }
+      .description {
+        margin: 0 10%;
+        padding: 0 0 16px 0;
+      }
 
-			.boxContainer1{
-				width:80%;
-				margin: 0 10%;
-				border: 1px solid #333;
-				min-height: 400px;
-				display: flex;
-				/*flex-direction: row; default*/
-				flex-direction: row;
-				/*flex-direction: column;*/
-				/*flex-direction: column-reverse;*/
+      .boxContainer1 {
+        width: 80%;
+        margin: 0 10%;
+        border: 1px solid #333;
+        min-height: 400px;
+        display: flex;
+        /*flex-direction: row; default*/
+        flex-direction: row;
+        /*flex-direction: column;*/
+        /*flex-direction: column-reverse;*/
 
-				flex-wrap: wrap; /*NOTE: overflow is the default behaviour*/
-				/*flex-wrap: wrap-reverse; NOTE: this just reveses the lines not the items*/
+        flex-wrap: wrap; /*NOTE: overflow is the default behaviour*/
+        /*flex-wrap: wrap-reverse; NOTE: this just reveses the lines not the items*/
 
-				/*NOTE: Use flex-flow: == flex-direction + flex-wrap*/
-				flex-flow: row wrap;
-			}
+        /*NOTE: Use flex-flow: == flex-direction + flex-wrap*/
+        flex-flow: row wrap;
+      }
 
-
-			.item{
-				padding:16px;
-				font-size: 2em;
-				font-weight: bold;
-				box-sizing: border-box;
-				border: 1px solid #333;
-				background-color: #eee;
-			}
-
-		</style>
-
-	</head>
-	<body>
-		<h1 class="pageTitle">Using Flexbox</h1>
-		<h2 class="pageSubTitle">Wrapping Flex Items</h2>
-		<p class="description">Useing 'flex-wrap' allows the objects to wrap in the container, resize window to see oveflow behaviour (default)</p>
-		<section class="boxContainer1">
-			<div class="item">One</div>
-			<div class="item">Two</div>
-			<div class="item">Three</div>
-			<div class="item">Four</div>
-			<div class="item">Five</div>
-			<div class="item">Six</div>
-			<div class="item">Seven</div>
-		</section>
-
-
-	</body>
-	</html>
+      .item {
+        padding: 16px;
+        font-size: 2em;
+        font-weight: bold;
+        box-sizing: border-box;
+        border: 1px solid #333;
+        background-color: #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="pageTitle">Using Flexbox</h1>
+    <h2 class="pageSubTitle">Wrapping Flex Items</h2>
+    <p class="description">
+      Useing 'flex-wrap' allows the objects to wrap in the container, resize
+      window to see oveflow behaviour (default)
+    </p>
+    <section class="boxContainer1">
+      <div class="item">One</div>
+      <div class="item">Two</div>
+      <div class="item">Three</div>
+      <div class="item">Four</div>
+      <div class="item">Five</div>
+      <div class="item">Six</div>
+      <div class="item">Seven</div>
+    </section>
+  </body>
+</html>

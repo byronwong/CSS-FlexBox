@@ -1,142 +1,145 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>FlexBox</title>
+  <head>
+    <meta charset="utf-8" />
+    <title>FlexBox</title>
 
-	<style type="text/css">
-		/*FLEXBOX*/
+    <style type="text/css">
+      /*FLEXBOX*/
 
-		body {
-			font-family: 'Gotham', 'arial', 'sans-serif';
-			font-size: 100%;
-			color: #333;
-		}
-		.pageTitle{
-			font-size: 4em;
-			margin: 0 10%;
-			padding: 16px 0;
-		}
-		.pageSubTitle{
-			margin: 0 10%;
-			padding: 0 0 16px 0;
-		}
-		.description{
-			margin: 0 10%;
-			padding: 0 0 16px 0;
-		}
+      body {
+        font-family: "Gotham", "arial", "sans-serif";
+        font-size: 100%;
+        color: #333;
+      }
+      .pageTitle {
+        font-size: 4em;
+        margin: 0 10%;
+        padding: 16px 0;
+      }
+      .pageSubTitle {
+        margin: 0 10%;
+        padding: 0 0 16px 0;
+      }
+      .description {
+        margin: 0 10%;
+        padding: 0 0 16px 0;
+      }
 
-		.boxContainer1{
-			width:80%;
-			margin: 0 10%;
-			border: 1px solid #333;
-			min-height: 400px;
+      .boxContainer1 {
+        width: 80%;
+        margin: 0 10%;
+        border: 1px solid #333;
+        min-height: 400px;
 
-			display: flex;
+        display: flex;
 
-			/*Main Axies*/
-			flex-flow: row wrap;
-			justify-content: space-around;
+        /*Main Axies*/
+        flex-flow: row wrap;
+        justify-content: space-around;
 
-			/*wrap lines (main)*/
-			align-content: stretch; /*aligns the lines of content*/
-		}
+        /*wrap lines (main)*/
+        align-content: stretch; /*aligns the lines of content*/
+      }
 
-		.item{
-			padding:16px;
-			font-size: 2em;
-			font-weight: bold;
-			box-sizing: border-box;
-			border: 1px solid #333;
-			background-color: #eee;
-		}
+      .item {
+        padding: 16px;
+        font-size: 2em;
+        font-weight: bold;
+        box-sizing: border-box;
+        border: 1px solid #333;
+        background-color: #eee;
+      }
 
-		.one{
-			order: 4;
-		}
+      .one {
+        order: 4;
+      }
 
-		.two{
-			order: 3;
-		}
+      .two {
+        order: 3;
+      }
 
-		.three{
-			order: 2;
-		}
+      .three {
+        order: 2;
+      }
 
-		.four {
-			order: 1;
-		}
+      .four {
+        order: 1;
+      }
 
-		.nest-container{
-			display: flex;
-			flex-flow: column;
-		}
-		.nest-box {
-			padding: 8px;
-			border: 1px solid #333;
-			box-sizing: border-box;
-		}
-		.nest-2{
-			/*edit order to top*/
-			order: -1;
-			background-color: #666;
-		}
+      .nest-container {
+        display: flex;
+        flex-flow: column;
+      }
+      .nest-box {
+        padding: 8px;
+        border: 1px solid #333;
+        box-sizing: border-box;
+      }
+      .nest-2 {
+        /*edit order to top*/
+        order: -1;
+        background-color: #666;
+      }
 
-		/*REFERENCE*/
-		.flex-container {
-			display: flex;/* Enable FlexBox*/
+      /*REFERENCE*/
+      .flex-container {
+        display: flex; /* Enable FlexBox*/
 
-			/*MAIN AXIS*/
-			flex-direction: row; /* row (D)|row-reverse|column|column-reverse|initial|inherit */
-			flex-wrap: nowrap; /*nowrap (D)|wrap|wrap-reverse|initial|inherit */
-			/*Shorthand*/flex-flow: row nowrap; /* [flex-direction] [flex-wrap]|initial|inherit;*/
+        /*MAIN AXIS*/
+        flex-direction: row; /* row (D)|row-reverse|column|column-reverse|initial|inherit */
+        flex-wrap: nowrap; /*nowrap (D)|wrap|wrap-reverse|initial|inherit */
+        /*Shorthand*/
+        flex-flow: row nowrap; /* [flex-direction] [flex-wrap]|initial|inherit;*/
 
-			/*main axis alignment of items*/justify-content:flex-start; /*flex-start(D)|flex-end|center|space-between|space-around|initial|inherit;*/
+        /*main axis alignment of items*/
+        justify-content: flex-start; /*flex-start(D)|flex-end|center|space-between|space-around|initial|inherit;*/
 
-			/*cross axis agliment of items*/align-items: stretch; /*stretch(D)|center|flex-start|flex-end|baseline|initial|inherit*/
+        /*cross axis agliment of items*/
+        align-items: stretch; /*stretch(D)|center|flex-start|flex-end|baseline|initial|inherit*/
 
-			/*flex-wrap lines */align-content: flex-start; /*stretch(D)|center|flex-start|flex-end|space-between|space-around|initial|inherit;*/
+        /*flex-wrap lines */
+        align-content: flex-start; /*stretch(D)|center|flex-start|flex-end|space-between|space-around|initial|inherit;*/
+      }
 
-		}
+      .flex-item {
+        flex-grow: 1; /* 0(D)|number|initial|inherit; 			http://www.w3schools.com/cssref/css3_pr_flex-grow.asp*/
+        flex-shrink: 1; /* 0(D)|number|initial|inherit;			http://www.w3schools.com/cssref/css3_pr_flex-shrink.asp*/
+        flex-basis: 100px; /* number|auto(D)|initial|inherit; 	http://www.w3schools.com/cssref/css3_pr_flex-basis.asp*/
+        /*Shorthand*/
+        flex: 0 0 auto; /*flex-grow flex-shrink flex-basis|auto|initial|inherit*/
 
-		.flex-item {
-			flex-grow: 1; /* 0(D)|number|initial|inherit; 			http://www.w3schools.com/cssref/css3_pr_flex-grow.asp*/
-			flex-shrink: 1; /* 0(D)|number|initial|inherit;			http://www.w3schools.com/cssref/css3_pr_flex-shrink.asp*/
-			flex-basis: 100px; /* number|auto(D)|initial|inherit; 	http://www.w3schools.com/cssref/css3_pr_flex-basis.asp*/
-			/*Shorthand*/ flex: 0 0 auto; /*flex-grow flex-shrink flex-basis|auto|initial|inherit*/
+        /*Individual align*/
+        align-self: flex-end; /*stretch(D)|center|flex-start|flex-end|baseline|initial|inherit;*/
 
-			/*Individual align*/align-self: flex-end; /*stretch(D)|center|flex-start|flex-end|baseline|initial|inherit;*/
-			
-			/*Item order*/ order: 0; /*number|initial|inherit; starts at 0, can use -N for priority*/ 
-			/*NOTE: interaction with flex-flow: row-reverse & flex-end */
-		}
+        /*Item order*/
+        order: 0; /*number|initial|inherit; starts at 0, can use -N for priority*/
+        /*NOTE: interaction with flex-flow: row-reverse & flex-end */
+      }
 
-		.important-items{
-			margin-left: auto; /*notice margin auto take all available space remaining*/
-			/*Also not that margins will be ignored in some modes such as space-around and space-between*/
-			/*Margins do not collaspe esp* in vertical spacing - NOTE using space-around|between will ignore margins altogether*/
-		}
-
-	</style>
-
-</head>
-<body>
-	<h1 class="pageTitle">Using Flexbox</h1>
-	<h2 class="pageSubTitle">Nesting flexboxes</h2>
-	<p class="description">Allows you to have a flexbox within a flexbox</p>
-	<section class="boxContainer1">
-		<div class="item one">One</div>
-		<div class="item two">
-			<h2>Two</h2>
-			<div class="nest-container">
-				<div class="nest-box">Nest-1</div>
-				<div class="nest-box nest-2">Nest-2</div>
-				<div class="nest-box">Nest-3</div>
-			</div>
-		</div>
-		<div class="item three">Three</div>
-		<div class="item four">Four</div>
-	</section>
-</body>
-
+      .important-items {
+        margin-left: auto; /*notice margin auto take all available space remaining*/
+        /*Also not that margins will be ignored in some modes such as space-around and space-between*/
+        /*Margins do not collaspe esp* in vertical spacing - NOTE using space-around|between will ignore margins altogether*/
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="pageTitle">Using Flexbox</h1>
+    <h2 class="pageSubTitle">Nesting flexboxes</h2>
+    <p class="description">Allows you to have a flexbox within a flexbox</p>
+    <section class="boxContainer1">
+      <div class="item one">One</div>
+      <div class="item two">
+        <h2>Two</h2>
+        <div class="nest-container">
+          <div class="nest-box">Nest-1</div>
+          <div class="nest-box nest-2">Nest-2</div>
+          <div class="nest-box">Nest-3</div>
+        </div>
+      </div>
+      <div class="item three">Three</div>
+      <div class="item four">Four</div>
+    </section>
+  </body>
 </html>

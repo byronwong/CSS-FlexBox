@@ -1,77 +1,73 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>FlexBox</title>
+  <head>
+    <meta charset="utf-8" />
+    <title>FlexBox</title>
 
-	<style type="text/css">
-		/*FLEXBOX*/
+    <style type="text/css">
+      /*FLEXBOX*/
 
-		body {
-			font-family: 'Gotham', 'arial', 'sans-serif';
-			font-size: 100%;
-			color: #333;
-		}
-		.pageTitle{
-			font-size: 4em;
-			margin: 0 10%;
-			padding: 16px 0;
-		}
-		.pageSubTitle{
-			margin: 0 10%;
-			padding: 0 0 16px 0;
-		}
-		.description{
-			margin: 0 10%;
-			padding: 0 0 16px 0;
-		}
+      body {
+        font-family: "Gotham", "arial", "sans-serif";
+        font-size: 100%;
+        color: #333;
+      }
+      .pageTitle {
+        font-size: 4em;
+        margin: 0 10%;
+        padding: 16px 0;
+      }
+      .pageSubTitle {
+        margin: 0 10%;
+        padding: 0 0 16px 0;
+      }
+      .description {
+        margin: 0 10%;
+        padding: 0 0 16px 0;
+      }
 
-		.boxContainer1{
-			width:80%;
-			margin: 0 10%;
-			border: 1px solid #333;
-			min-height: 400px;
+      .boxContainer1 {
+        width: 80%;
+        margin: 0 10%;
+        border: 1px solid #333;
+        min-height: 400px;
 
-			display: flex;
+        display: flex;
 
-			/*Main Axies*/
-			justify-content: space-between;
+        /*Main Axies*/
+        justify-content: space-between;
 
-			/*Cross Axies*/
-			/*Default take 100% container height : 'stretch'*/
-			/*flex-start*/
-			/*flex-end*/
-			/*center*/
-			/*stretch*/
-			/*baseline*/
-			align-items: flex-start;
+        /*Cross Axies*/
+        /*Default take 100% container height : 'stretch'*/
+        /*flex-start*/
+        /*flex-end*/
+        /*center*/
+        /*stretch*/
+        /*baseline*/
+        align-items: flex-start;
+      }
 
-		}
-
-
-		.item{
-			padding:16px;
-			font-size: 2em;
-			font-weight: bold;
-			box-sizing: border-box;
-			border: 1px solid #333;
-			background-color: #eee;
-
-		}
-	</style>
-
-</head>
-<body>
-	<h1 class="pageTitle">Using Flexbox</h1>
-	<h2 class="pageSubTitle">align-items stretch|center|flex-start|flex-end|baseline|initial|inherit;</h2>
-	<p class="description">Controls the cross axis alignment</p>
-	<section class="boxContainer1">
-		<div class="item flex1">One</div>
-		<div class="item flex1">Two</div>
-		<div class="item flex2">Three Longer</div>
-		<div class="item flex1">Four</div>
-	</section>
-
-
-</body>
+      .item {
+        padding: 16px;
+        font-size: 2em;
+        font-weight: bold;
+        box-sizing: border-box;
+        border: 1px solid #333;
+        background-color: #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="pageTitle">Using Flexbox</h1>
+    <h2 class="pageSubTitle">
+      align-items stretch|center|flex-start|flex-end|baseline|initial|inherit;
+    </h2>
+    <p class="description">Controls the cross axis alignment</p>
+    <section class="boxContainer1">
+      <div class="item flex1">One</div>
+      <div class="item flex1">Two</div>
+      <div class="item flex2">Three Longer</div>
+      <div class="item flex1">Four</div>
+    </section>
+  </body>
 </html>
